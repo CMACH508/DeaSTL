@@ -1,0 +1,23 @@
+OMP_NUM_THREADS=1 torchrun --nnodes=1 --nproc_per_node=8 run_class_finetuning.py \
+        --output_dir ./checkpoints/sleep/ \
+        --log_dir ./log/sleep\
+        --model labram_base_patch200_200 \
+        --finetune ./checkpoints/labram-base.pth \
+        --weight_decay 0.05 \
+        --batch_size 128 \
+        --lr 5e-4 \
+        --update_freq 1 \
+        --warmup_epochs 3 \
+        --epochs 10 \
+        --layer_decay 0.65 \
+        --drop_path 0.1 \
+        --dist_eval \
+        --save_ckpt_freq 5 \
+        --disable_rel_pos_bias \
+        --abs_pos_emb \
+        --dataset BECT \
+        --taskname sleep \
+        --disable_qkv_bias \
+        --seed 0 \
+        --loss_type focalloss \
+        --eval
