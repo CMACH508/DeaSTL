@@ -39,4 +39,4 @@ run.sh
 
 ## Pre-trained Models
 
-`cts/checkpoints.pt`, `sleep/checkpoints.pt`, `swi/checkpoints.pt` are the trained model of DeaSTL for three tasks.
+`checkpoints/cts/checkpoints.pt`, `checkpoints/sleep/checkpoints.pt`, `checkpoints/swi/checkpoints.pt` are the trained model of DeaSTL for three tasks.
